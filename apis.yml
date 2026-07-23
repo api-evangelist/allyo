@@ -1,8 +1,27 @@
 aid: allyo
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/allyo.png
 name: AllyO
-description: 'AllyO is a company surfaced as a portfolio company of sapphire-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: hr-tech. This profile is a lead awaiting the
-  enrichment pipeline.'
+description: 'AllyO is an HR-tech company, founded in 2016 in Palo Alto, California, that built a
+  conversation-first, AI recruiting chatbot and automation platform for high-volume hiring. Its
+  chatbot let candidates apply to jobs, answer common questions, get screened, and schedule
+  interviews via text and web chat 24/7, with integrations into applicant tracking systems, job
+  boards, and background-check providers. AllyO raised roughly $64M in venture funding (including a
+  $45M round in 2019 backed by investors such as Sapphire Ventures) before being acquired by HireVue
+  in October 2020. The AllyO product now lives inside HireVue as its Conversational AI and Automation
+  offering; www.allyo.com 301-redirects to HireVue and AllyO no longer operates an independent public
+  developer or API surface. This profile is retained as an acquired-company record in the API
+  Evangelist network.'
 url: https://raw.githubusercontent.com/api-evangelist/allyo/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -10,12 +29,21 @@ x-backed-by:
 - sapphire-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-acquired-by: hirevue
+x-acquired-date: '2020-10-06'
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
 tags:
 - Company
 - Hr Tech
+- Recruiting
+- Conversational AI
+- Chatbot
+- Hiring Automation
+- Applicant Tracking
+- Acquired
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +51,14 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/allyo-domain-security.yml
 - type: Website
   url: https://www.allyo.com/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/allyo
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
