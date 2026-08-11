@@ -34,7 +34,7 @@ x-acquired-by: hirevue
 x-acquired-date: '2020-10-06'
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-08-10'
 tags:
 - Company
 - Hr Tech
@@ -57,8 +57,43 @@ common:
   url: https://www.allyo.com/
 - type: LinkedIn
   url: https://www.linkedin.com/company/allyo
+- type: Twitter
+  url: https://x.com/allyoai
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-10'
+  status: minimal
+  artifacts_added: 1
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+  note: >-
+    Full contract discovery (STEP 0b) run against every reachable allyo.com host; no machine-readable
+    contract, no packages, no GitHub org, no /.well-known/ document. Absence recorded in
+    well-known/allyo-well-known.yml with no WellKnown/SecurityTxt/AgentCard pointer emitted.
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    AllyO was acquired by HireVue in October 2020 and no longer exists as an independent company —
+    www.allyo.com 301-redirects to hirevue.com/platform/conversational-ai-and-automation, the apex
+    allyo.com returns 502, api.allyo.com resolves only to an internal VPN load balancer that never
+    completes a TLS handshake, and the one surviving host, services.allyo.com, is the login-gated
+    "HireVue Assistant Dashboard" customer app with no public developer surface.
+  evidence:
+  - url: https://www.allyo.com/
+    status: 301
+  - url: https://allyo.com/
+    status: 502
+  - url: https://api.allyo.com/
+    status: 0
+  - url: https://services.allyo.com/dashboard/list/
+    status: 200
+  - url: https://services.allyo.com/openapi.json
+    status: 404
+  - url: https://services.allyo.com/graphql
+    status: 403
+  - url: https://www.allyo.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.allyo.com/llms.txt
+    status: 404
+  - url: https://status.allyo.com/
+    status: 0
+  checked: '2026-08-10'
