@@ -21,6 +21,8 @@ accessModel:
   source: []
   generated: '2026-07-22'
   method: derived
+  source:
+  - {url: 'https://www.allyo.com/', status: 301, note: 'declared website redirects to https://www.hirevue.com/platform/candidate-engagement-tools — a different registrable domain (allyo.com -> hirevue.com), possible rename or acquisition (probed 2026-09-03, roadmap#169)'}
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/allyo.png
 name: AllyO
 description: 'AllyO is an HR-tech company, founded in 2016 in Palo Alto, California, that built a
